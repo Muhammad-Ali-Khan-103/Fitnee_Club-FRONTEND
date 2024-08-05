@@ -2,92 +2,472 @@
 
 /* Global styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body styling */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Root container */
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
-  /* Main App container styling */
-  .App {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Headings */
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
-  /* Links */
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Buttons */
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Forms */
-  input, textarea, select {
-    font-family: inherit;
-    font-size: inherit;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input:focus, textarea:focus, select:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  /* Utilities */
-  .text-center {
-    text-align: center;
-  }
-  
-  .mb-4 {
-    margin-bottom: 1rem;
-  }
-  
-  .mt-4 {
-    margin-top: 1rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Root container */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Center the sign-up box */
+.sign-up-container, .login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+}
+
+.sign-up-box, .login-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sign-up-box h1, .login-box h2 {
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Adjusted margin for spacing */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none; /* Remove default border */
+  cursor: pointer;
+  background-color: #2ecc71; /* Parrot green color */
+  color: #fff;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Login link styling */
+.signup-link, .login-link {
+  margin-top: 20px;
+}
+
+.signup-link p, .login-link p {
+  margin: 0;
+}
+
+.signup-link a, .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover, .login-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* index.css */
+
+/* Center the not-found box */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  background-color: #f4f4f4;
+}
+
+.not-found-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.not-found-box h1 {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: #e74c3c; /* Red color for the 404 number */
+}
+
+.not-found-box p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.not-found-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.not-found-box a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* index.css */
+
+/* Not Found Page Styling */
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distributes space between elements */
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Adjust max width as needed */
+  height: auto; /* Allow height to adjust based on content */
+}
+
+.not-found-container img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.not-found-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.not-found-container .back-home-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px; /* Ensure there is space between the text and the button */
+}
+
+.not-found-container .back-home-link:hover {
+  text-decoration: underline;
+}
+
+.not-found-container .back-home-link span {
+  margin-left: 8px;
+}
+
+
+
+
+
+/* index.css */
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed; /* Fix the navbar at the top */
+  width: 100%; /* Ensure it spans the full width */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Welcome Page styling */
+.welcome-content {
+  padding: 80px 20px 20px; /* Adjust padding to account for the fixed navbar */
+  text-align: center;
+}
+
+.welcome-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+
+
+
+
+
+/* Style for the entire content of the welcome page */
+.welcome-content {
+  padding: 80px 20px 20px; /* Adjust padding to account for the fixed navbar */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+}
+
+.welcome-content h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px; /* Space between the text and the image */
+}
+
+.welcome-image {
+  width: 80%; /* Adjust width to make the image bigger */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 600px; /* Increase max height as needed */
+  margin-top: 20px; /* Space between image and text */
+}
+
+
+
+/* SignUpPage.css */
+
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  padding: 20px;
+}
+
+.sign-up-box {
+  display: flex;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure child elements don't overflow the box */
+}
+
+.sign-up-image {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+.sign-up-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image covers the box area */
+}
+
+.sign-up-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.sign-up-form h1 {
+  margin-bottom: 20px;
+}
+
+.sign-up-form .form-group {
+  margin-bottom: 15px;
+}
+
+.sign-up-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Adjusted margin for spacing */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-up-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 16px;
+}
+
+.sign-up-form button:hover {
+  background-color: #27ae60;
+}
+
+.sign-up-form .login-link {
+  margin-top: 20px;
+}
+
+.sign-up-form .login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sign-up-form .login-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* LoginPage.css */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  padding: 20px;
+}
+
+.login-box {
+  display: flex;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure child elements don't overflow the box */
+}
+
+.login-image {
+  flex: 1;
+  background-color: #f4f4f4;
+}
+
+.login-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensure the image covers the box area */
+}
+
+.login-form {
+  flex: 1;
+  padding: 20px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Adjusted margin for spacing */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-form button:hover {
+  background-color: #27ae60;
+}
+
+.login-form .signup-link {
+  margin-top: 20px;
+}
+
+.login-form .signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form .signup-link a:hover {
+  text-decoration: underline;
+}
